@@ -10,6 +10,8 @@
 		3614CF9D260A41C50042FBE5 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614CF9C260A41C50042FBE5 /* APIEndpoint.swift */; };
 		3614CFA7260A43770042FBE5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614CFA6260A43770042FBE5 /* APIClient.swift */; };
 		3614CFAD260A44240042FBE5 /* Stargazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614CFAC260A44240042FBE5 /* Stargazer.swift */; };
+		3614CFB6260A49830042FBE5 /* DownloadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614CFB5260A49830042FBE5 /* DownloadImageOperation.swift */; };
+		3614CFBC260A4A170042FBE5 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3614CFBB260A4A170042FBE5 /* ImageCache.swift */; };
 		3674AF02260A403E003AAFE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3674AF01260A403E003AAFE2 /* AppDelegate.swift */; };
 		3674AF04260A403E003AAFE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3674AF03260A403E003AAFE2 /* SceneDelegate.swift */; };
 		3674AF06260A403E003AAFE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3674AF05260A403E003AAFE2 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		3614CF9C260A41C50042FBE5 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		3614CFA6260A43770042FBE5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		3614CFAC260A44240042FBE5 /* Stargazer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stargazer.swift; sourceTree = "<group>"; };
+		3614CFB5260A49830042FBE5 /* DownloadImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageOperation.swift; sourceTree = "<group>"; };
+		3614CFBB260A4A170042FBE5 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		3674AEFE260A403E003AAFE2 /* stargazer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stargazer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3674AF01260A403E003AAFE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3674AF03260A403E003AAFE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +107,9 @@
 				3674AF01260A403E003AAFE2 /* AppDelegate.swift */,
 				3674AF03260A403E003AAFE2 /* SceneDelegate.swift */,
 				3614CF9B260A41B20042FBE5 /* API */,
+				3614CFBA260A4A030042FBE5 /* Cache */,
 				3614CFAB260A44060042FBE5 /* Model */,
+				3614CFB4260A496E0042FBE5 /* Operations */,
 				3674AF05260A403E003AAFE2 /* ViewController.swift */,
 			);
 			path = Classes;
@@ -142,6 +148,22 @@
 				3614CFAC260A44240042FBE5 /* Stargazer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3614CFB4260A496E0042FBE5 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				3614CFB5260A49830042FBE5 /* DownloadImageOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		3614CFBA260A4A030042FBE5 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				3614CFBB260A4A170042FBE5 /* ImageCache.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		3674AEF5260A403E003AAFE2 = {
@@ -456,6 +478,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3674AF06260A403E003AAFE2 /* ViewController.swift in Sources */,
+				3614CFB6260A49830042FBE5 /* DownloadImageOperation.swift in Sources */,
+				3614CFBC260A4A170042FBE5 /* ImageCache.swift in Sources */,
 				3674AF02260A403E003AAFE2 /* AppDelegate.swift in Sources */,
 				3674AF04260A403E003AAFE2 /* SceneDelegate.swift in Sources */,
 				3614CFAD260A44240042FBE5 /* Stargazer.swift in Sources */,
