@@ -1,0 +1,6 @@
+framework module Pods_stargazer {
+  umbrella header "Pods-stargazer-umbrella.h"
+
+  export *
+  module * { export * }
+}
