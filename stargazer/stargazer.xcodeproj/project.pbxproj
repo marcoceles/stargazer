@@ -180,6 +180,7 @@
 				3674AEFA260A403E003AAFE2 /* Sources */,
 				3674AEFB260A403E003AAFE2 /* Frameworks */,
 				3674AEFC260A403E003AAFE2 /* Resources */,
+				16A844C95E919694BA1E9445 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +218,7 @@
 				3674AF1B260A4040003AAFE2 /* Sources */,
 				3674AF1C260A4040003AAFE2 /* Frameworks */,
 				3674AF1D260A4040003AAFE2 /* Resources */,
+				23D7D4E98FC2DAA58AF39B87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +300,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16A844C95E919694BA1E9445 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stargazer/Pods-stargazer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stargazer/Pods-stargazer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stargazer/Pods-stargazer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23D7D4E98FC2DAA58AF39B87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stargazer-stargazerUITests/Pods-stargazer-stargazerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stargazer-stargazerUITests/Pods-stargazer-stargazerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stargazer-stargazerUITests/Pods-stargazer-stargazerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4721282763B35B80DEBBDAA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
