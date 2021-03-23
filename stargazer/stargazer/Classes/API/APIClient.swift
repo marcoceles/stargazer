@@ -21,3 +21,18 @@ class APIClient{
         }
     }
 }
+
+extension APIClient{
+
+    public func getStargazers(for owner: String, and repo: String, completion: @escaping (Result<[Stargazer], Error>) -> Void){
+        self.makeAPICall(.getStargazers(owner: owner, repo: repo), responseClass: [Stargazer].self, completion: { result in
+
+            switch result{
+            case .success(let stargazers):
+                completion(.success(stargazers))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+}
