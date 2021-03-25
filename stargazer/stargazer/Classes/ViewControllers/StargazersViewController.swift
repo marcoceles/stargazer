@@ -10,9 +10,25 @@ import UIKit
 class StargazersViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var ownerField: UITextField!
-    @IBOutlet weak var repoField: UITextField!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var ownerField: UITextField!{
+        didSet{
+            ownerField.placeholder = NSLocalizedString("field.placeholder.owner",
+                                                       comment: "Owner field placeholder text")
+        }
+    }
+    @IBOutlet weak var repoField: UITextField!{
+        didSet{
+            repoField.placeholder = NSLocalizedString("field.placeholder.repo",
+                                                       comment: "Repository field placeholder text")
+        }
+    }
+    @IBOutlet weak var searchButton: UIButton!{
+        didSet{
+            searchButton.setTitle(NSLocalizedString("button.title.submit",
+                                                    comment: "Submit button title"),
+                                                    for: .normal)
+        }
+    }
     @IBOutlet weak var resultTableView: UITableView!
 
     // MARK: - Properties
@@ -22,6 +38,9 @@ class StargazersViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = NSLocalizedString("stargazers.page.title", comment: "Stargazers page title")
+
         self.dataSource = StargazersDataSource(with: resultTableView)
 
         //Prepare tableView
@@ -31,8 +50,8 @@ class StargazersViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func searchAction(_ sender: Any) {
-        guard let owner = ownerField.text,
-              let repo = repoField.text
+        guard let owner = ownerField.text, !owner.isEmpty,
+              let repo = repoField.text, !repo.isEmpty
         else { return }
         self.viewModel = StargazersViewModel(with: owner, repo: repo, delegate: self)
         self.viewModel?.getStargazers()
@@ -58,7 +77,7 @@ extension StargazersViewController: StargazersDataSourceDelegate {
         self.dataSource?.applySnapshot(items: items)
     }
 
-    func didFail(with error: Error) {
-
+    func didFail(with error: StargazerError) {
+        self.show(error: error)
     }
 }

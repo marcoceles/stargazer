@@ -9,5 +9,5 @@ import Foundation
 
 protocol StargazersDataSourceDelegate {
     func didLoad(items: [Stargazer])
-    func didFail(with error: Error)
+    func didFail(with error: StargazerError)
 }
