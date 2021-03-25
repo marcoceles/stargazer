@@ -28,13 +28,15 @@ enum APIEndpoint : URLConvertible{
         case .getStargazers(let owner, let repo, let page):
             let base = baseUrl.appendingPathComponent("repos/\(owner)/\(repo)/stargazers")
             var components = URLComponents()
-
+            components.scheme = base.scheme
+            components.host = base.host
+            components.path = base.path
             components.queryItems = [
                 URLQueryItem(name: "per_page", value: "20"),
                 URLQueryItem(name: "page", value: "\(page)")
             ]
 
-            return components.url(relativeTo: base)
+            return components.url
         }
     }
 

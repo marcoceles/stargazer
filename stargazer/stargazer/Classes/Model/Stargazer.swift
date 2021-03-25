@@ -18,16 +18,16 @@ struct Stargazer: Decodable {
     let avatarURL: URL?
     let gravatarID: String?
     let url: URL?
-    let htmlURL: URL?
-    let followersURL: URL?
-    let followingURL: URL?
-    let gistsURL: URL?
-    let starredURL: URL?
-    let subscriptionsURL: URL?
-    let organizationsURL: URL?
-    let reposURL: URL?
-    let eventsURL: URL?
-    let receivedEventsURL: URL?
+    let htmlURL: String?
+    let followersURL: String?
+    let followingURL: String?
+    let gistsURL: String?
+    let starredURL: String?
+    let subscriptionsURL: String?
+    let organizationsURL: String?
+    let reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
     let type: StargazerType?
     let siteAdmin: Bool?
 
