@@ -30,6 +30,7 @@ class StargazersViewController: UIViewController {
         }
     }
     @IBOutlet weak var resultTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     // MARK: - Properties
     var viewModel: StargazersViewModel?
@@ -48,12 +49,22 @@ class StargazersViewController: UIViewController {
         resultTableView.prefetchDataSource = self
     }
 
+    // MARK: - Utils
+    private func showActivityIndicator(){
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+    }
+
     // MARK: - Actions
     @IBAction func searchAction(_ sender: Any) {
         guard let owner = ownerField.text, !owner.isEmpty,
               let repo = repoField.text, !repo.isEmpty
         else { return }
+
+        self.showActivityIndicator()
+
         self.dataSource?.reset()
+
         self.viewModel = StargazersViewModel(with: owner, repo: repo, delegate: self)
         self.viewModel?.getStargazers()
     }
@@ -76,9 +87,11 @@ extension StargazersViewController: StargazersDataSourceDelegate {
 
     func didLoad(items: [Stargazer]) {
         self.dataSource?.applySnapshot(items: items)
+        self.activityIndicator.stopAnimating()
     }
 
     func didFail(with error: StargazerError) {
         self.show(error: error)
+        self.activityIndicator.stopAnimating()
     }
 }

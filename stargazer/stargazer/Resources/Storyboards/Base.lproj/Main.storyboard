@@ -98,6 +98,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-8D-LJY">
+                                <rect key="frame" x="176.66666666666666" y="430.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,7 +108,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Qvv-pR-Hyz" secondAttribute="trailing" id="16I-V1-Ykj"/>
                             <constraint firstItem="M06-Ih-SBo" firstAttribute="top" secondItem="Qvv-pR-Hyz" secondAttribute="bottom" id="5ef-tb-11k"/>
                             <constraint firstItem="Ios-gq-IMm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8r4-0k-vLw"/>
+                            <constraint firstItem="X0Y-8D-LJY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9qM-14-2B3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M06-Ih-SBo" secondAttribute="trailing" id="C3f-h6-rXc"/>
+                            <constraint firstItem="X0Y-8D-LJY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KWs-Yi-xAL"/>
                             <constraint firstItem="Qvv-pR-Hyz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="QqP-ti-0ma"/>
                             <constraint firstItem="Ios-gq-IMm" firstAttribute="top" secondItem="M06-Ih-SBo" secondAttribute="bottom" constant="8" symbolic="YES" id="SOA-ee-2lU"/>
                             <constraint firstItem="Ios-gq-IMm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hRz-Xe-D8c"/>
@@ -116,6 +121,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cerca" id="gaC-tb-aHp"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="X0Y-8D-LJY" id="SZW-TM-vXn"/>
                         <outlet property="ownerField" destination="i31-7d-yve" id="hly-Hf-OAC"/>
                         <outlet property="repoField" destination="XOI-g1-Cma" id="BEd-Vl-za3"/>
                         <outlet property="resultTableView" destination="Ios-gq-IMm" id="Aze-SR-h3G"/>
