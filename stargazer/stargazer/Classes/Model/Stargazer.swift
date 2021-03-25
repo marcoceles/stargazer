@@ -7,6 +7,9 @@
 
 import Foundation
 
+//MARK: - Response
+typealias StargazersResponse = [Stargazer]?
+
 // MARK: - Stargazer
 struct Stargazer: Decodable {
     let login: String

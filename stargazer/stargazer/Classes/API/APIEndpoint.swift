@@ -10,12 +10,12 @@ import Alamofire
 
 enum APIEndpoint : URLConvertible{
 
-    case getStargazers(owner: String, repo: String)
+    case getStargazers(owner: String, repo: String, page: Int)
 
     // MARK: - Properties
     var method: HTTPMethod {
         switch self {
-        case .getStargazers(_, _):
+        case .getStargazers(_, _, _):
             return .get
         }
     }
@@ -25,8 +25,16 @@ enum APIEndpoint : URLConvertible{
             return nil
         }
         switch self {
-        case .getStargazers(let owner, let repo):
-            return baseUrl.appendingPathComponent("repos/\(owner)/\(repo)/stargazers")
+        case .getStargazers(let owner, let repo, let page):
+            let base = baseUrl.appendingPathComponent("repos/\(owner)/\(repo)/stargazers")
+            var components = URLComponents()
+
+            components.queryItems = [
+                URLQueryItem(name: "per_page", value: "20"),
+                URLQueryItem(name: "page", value: "\(page)")
+            ]
+
+            return components.url(relativeTo: base)
         }
     }
 
