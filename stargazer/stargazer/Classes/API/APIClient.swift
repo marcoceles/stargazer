@@ -25,7 +25,7 @@ class APIClient{
 
     private func decode<O : Decodable>(errorResponse: DataResponse<O, AFError>) -> StargazerError{
         guard let data = errorResponse.data else {
-            return  StargazerError.init(message: nil)
+            return  StargazerError.init(message: errorResponse.error?.localizedDescription)
         }
         let decoder = JSONDecoder()
         do{
@@ -33,7 +33,7 @@ class APIClient{
             return apiError
         }
         catch{
-            return StargazerError.init(message: nil)
+            return StargazerError.init(message: errorResponse.error?.localizedDescription)
         }
     }
 }
