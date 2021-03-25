@@ -49,4 +49,10 @@ class StargazersDataSource{
         snapshot.appendItems(items)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
+
+    func reset(){
+        snapshot.deleteAllItems()
+        snapshot.appendSections([.main])
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
 }

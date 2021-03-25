@@ -53,6 +53,7 @@ class StargazersViewController: UIViewController {
         guard let owner = ownerField.text, !owner.isEmpty,
               let repo = repoField.text, !repo.isEmpty
         else { return }
+        self.dataSource?.reset()
         self.viewModel = StargazersViewModel(with: owner, repo: repo, delegate: self)
         self.viewModel?.getStargazers()
     }
