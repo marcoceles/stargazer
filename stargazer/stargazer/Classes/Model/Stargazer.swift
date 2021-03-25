@@ -56,3 +56,16 @@ struct Stargazer: Decodable {
 enum StargazerType: String, Codable {
     case user = "User"
 }
+
+
+extension Stargazer: Hashable{
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: Stargazer, rhs: Stargazer) -> Bool {
+        lhs.id == rhs.id
+    }
+
+}

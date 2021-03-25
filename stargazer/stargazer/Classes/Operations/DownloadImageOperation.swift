@@ -56,20 +56,20 @@ class DownloadImageOperation: Operation {
             return
         }
 
-        AF.download(url).responseData { (response) in
+        AF.download(url).responseData { [weak self] response in
 
             switch response.result{
             case .success(let data):
                 let image = UIImage(data: data)
-                self.imageDownloaded = image
+                self?.imageDownloaded = image
                 ImageCache.shared.cache(image: image, for: url.absoluteString)
 
             case .failure(let error):
-                self.error = error
+                self?.error = error
             }
 
-            self.isExecuting = false
-            self.isFinished = true
+            self?.isExecuting = false
+            self?.isFinished = true
         }
     }
 

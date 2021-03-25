@@ -11,10 +11,10 @@ class StargazersViewModel {
 
     var delegate: StargazersDataSourceDelegate
 
-    private var dataSource = [Stargazer]()
-
-    private var currentPage = 0
+    private var currentPage = 1
     private var theresNoMoreData = false
+
+    var stargazers = [Stargazer]()
 
     private var owner: String
     private var repo: String
@@ -40,8 +40,8 @@ class StargazersViewModel {
                         self?.theresNoMoreData = true
                         return
                     }
-                    self?.dataSource.append(contentsOf: response)
-                    self?.delegate.didUpdateDataSource()
+                    self?.stargazers.append(contentsOf: response)
+                    self?.delegate.didLoad(items: response)
                 case .failure(let error):
                     self?.delegate.didFail(with: error)
                 }

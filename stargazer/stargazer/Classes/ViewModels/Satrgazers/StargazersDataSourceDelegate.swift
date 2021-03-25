@@ -8,6 +8,6 @@
 import Foundation
 
 protocol StargazersDataSourceDelegate {
-    func didUpdateDataSource()
+    func didLoad(items: [Stargazer])
     func didFail(with error: Error)
 }
