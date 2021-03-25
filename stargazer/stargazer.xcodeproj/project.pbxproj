@@ -20,6 +20,11 @@
 		3674AF0E260A4040003AAFE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3674AF0C260A4040003AAFE2 /* LaunchScreen.storyboard */; };
 		3674AF19260A4040003AAFE2 /* stargazerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3674AF18260A4040003AAFE2 /* stargazerTests.swift */; };
 		3674AF24260A4040003AAFE2 /* stargazerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3674AF23260A4040003AAFE2 /* stargazerUITests.swift */; };
+		36CBC168260C93A70082657B /* StargazersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC167260C93A70082657B /* StargazersViewModel.swift */; };
+		36CBC169260C93A70082657B /* StargazersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC167260C93A70082657B /* StargazersViewModel.swift */; };
+		36CBC174260C9B310082657B /* StargazersDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC173260C9B310082657B /* StargazersDataSourceDelegate.swift */; };
+		36CBC17B260CA1A20082657B /* StargazerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC17A260CA1A20082657B /* StargazerCellViewModel.swift */; };
+		36CBC182260CA1A80082657B /* StargazerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC17A260CA1A20082657B /* StargazerCellViewModel.swift */; };
 		448F262F08623A89453F5D6B /* Pods_stargazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E96D9E2A237A18540A21DE3 /* Pods_stargazer.framework */; };
 		BE38A60948B95609B71D56DE /* Pods_stargazer_stargazerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7189F9E60BD2377DE0050F7 /* Pods_stargazer_stargazerUITests.framework */; };
 		F40B4480FDB44FCDD3B0BAA8 /* Pods_stargazerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE2D0BF1632868E1728A327 /* Pods_stargazerTests.framework */; };
@@ -64,6 +69,9 @@
 		3674AF1F260A4040003AAFE2 /* stargazerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stargazerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3674AF23260A4040003AAFE2 /* stargazerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stargazerUITests.swift; sourceTree = "<group>"; };
 		3674AF25260A4040003AAFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36CBC167260C93A70082657B /* StargazersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StargazersViewModel.swift; sourceTree = "<group>"; };
+		36CBC173260C9B310082657B /* StargazersDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StargazersDataSourceDelegate.swift; sourceTree = "<group>"; };
+		36CBC17A260CA1A20082657B /* StargazerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StargazerCellViewModel.swift; sourceTree = "<group>"; };
 		4E96D9E2A237A18540A21DE3 /* Pods_stargazer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stargazer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696EF3175F59D8B9A75C8052 /* Pods-stargazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stargazer.release.xcconfig"; path = "Target Support Files/Pods-stargazer/Pods-stargazer.release.xcconfig"; sourceTree = "<group>"; };
 		7CE2A678FF2FEFB9ADCB356E /* Pods-stargazer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stargazer.debug.xcconfig"; path = "Target Support Files/Pods-stargazer/Pods-stargazer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 				3614CFBA260A4A030042FBE5 /* Cache */,
 				3614CFAB260A44060042FBE5 /* Model */,
 				3614CFB4260A496E0042FBE5 /* Operations */,
+				36CBC166260C938B0082657B /* ViewModels */,
 				3674AF05260A403E003AAFE2 /* ViewController.swift */,
 			);
 			path = Classes;
@@ -214,6 +223,32 @@
 				3674AF25260A4040003AAFE2 /* Info.plist */,
 			);
 			path = stargazerUITests;
+			sourceTree = "<group>";
+		};
+		36CBC166260C938B0082657B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				36CBC178260CA16F0082657B /* Satrgazers */,
+				36CBC179260CA1870082657B /* StargazerCell */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		36CBC178260CA16F0082657B /* Satrgazers */ = {
+			isa = PBXGroup;
+			children = (
+				36CBC167260C93A70082657B /* StargazersViewModel.swift */,
+				36CBC173260C9B310082657B /* StargazersDataSourceDelegate.swift */,
+			);
+			path = Satrgazers;
+			sourceTree = "<group>";
+		};
+		36CBC179260CA1870082657B /* StargazerCell */ = {
+			isa = PBXGroup;
+			children = (
+				36CBC17A260CA1A20082657B /* StargazerCellViewModel.swift */,
+			);
+			path = StargazerCell;
 			sourceTree = "<group>";
 		};
 		3DBE2DA0CB7BDF586DA44E7F /* Frameworks */ = {
@@ -480,11 +515,14 @@
 				3674AF06260A403E003AAFE2 /* ViewController.swift in Sources */,
 				3614CFB6260A49830042FBE5 /* DownloadImageOperation.swift in Sources */,
 				3614CFBC260A4A170042FBE5 /* ImageCache.swift in Sources */,
+				36CBC17B260CA1A20082657B /* StargazerCellViewModel.swift in Sources */,
 				3674AF02260A403E003AAFE2 /* AppDelegate.swift in Sources */,
 				3674AF04260A403E003AAFE2 /* SceneDelegate.swift in Sources */,
 				3614CFAD260A44240042FBE5 /* Stargazer.swift in Sources */,
 				3614CFA7260A43770042FBE5 /* APIClient.swift in Sources */,
+				36CBC174260C9B310082657B /* StargazersDataSourceDelegate.swift in Sources */,
 				3614CF9D260A41C50042FBE5 /* APIEndpoint.swift in Sources */,
+				36CBC168260C93A70082657B /* StargazersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +530,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CBC169260C93A70082657B /* StargazersViewModel.swift in Sources */,
 				3674AF19260A4040003AAFE2 /* stargazerTests.swift in Sources */,
+				36CBC182260CA1A80082657B /* StargazerCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
