@@ -1,0 +1,42 @@
+[
+  {
+    "login": "ndbroadbent",
+    "id": 139536,
+    "node_id": "MDQ6VXNlcjEzOTUzNg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/139536?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ndbroadbent",
+    "html_url": "https://github.com/ndbroadbent",
+    "followers_url": "https://api.github.com/users/ndbroadbent/followers",
+    "following_url": "https://api.github.com/users/ndbroadbent/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ndbroadbent/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ndbroadbent/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ndbroadbent/subscriptions",
+    "organizations_url": "https://api.github.com/users/ndbroadbent/orgs",
+    "repos_url": "https://api.github.com/users/ndbroadbent/repos",
+    "events_url": "https://api.github.com/users/ndbroadbent/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ndbroadbent/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  {
+    "login": "amatsuda",
+    "id": 11493,
+    "node_id": "MDQ6VXNlcjExNDkz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/11493?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/amatsuda",
+    "html_url": "https://github.com/amatsuda",
+    "followers_url": "https://api.github.com/users/amatsuda/followers",
+    "following_url": "https://api.github.com/users/amatsuda/following{/other_user}",
+    "gists_url": "https://api.github.com/users/amatsuda/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/amatsuda/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/amatsuda/subscriptions",
+    "organizations_url": "https://api.github.com/users/amatsuda/orgs",
+    "repos_url": "https://api.github.com/users/amatsuda/repos",
+    "events_url": "https://api.github.com/users/amatsuda/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/amatsuda/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+  ]
