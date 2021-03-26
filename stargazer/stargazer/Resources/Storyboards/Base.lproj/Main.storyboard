@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Zb-PH-Fkt">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cerca-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StargazersViewController" customModule="stargazer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qvv-pR-Hyz">
+                                <rect key="frame" x="16" y="104" width="358" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome dell'owner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i31-7d-yve">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="34"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome del repository" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-g1-Cma">
+                                        <rect key="frame" x="0.0" y="42" width="358" height="34"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SC-fn-baZ">
+                                        <rect key="frame" x="0.0" y="84" width="358" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="0Ow-QC-feZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Cerca Stargazers"/>
+                                        <connections>
+                                            <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVY-No-d5D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M06-Ih-SBo">
+                                <rect key="frame" x="0.0" y="226" width="390" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="l7v-9m-Vtm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ios-gq-IMm">
+                                <rect key="frame" x="16" y="235" width="358" height="575"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="stargazerCell" id="s18-M1-e9r" customClass="StargazerTableViewCell" customModule="stargazer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="358" height="66.333335876464844"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s18-M1-e9r" id="C7a-TW-2vi">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="66.333335876464844"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OXs-kD-p4n" customClass="RemoteImageView" customModule="stargazer" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="8.9999999999999964" width="50" height="49"/>
+                                                    <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="4JO-tP-mjq"/>
+                                                        <constraint firstAttribute="height" constant="50" id="ie1-RN-qcd"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDn-mw-urb">
+                                                    <rect key="frame" x="66" y="7.9999999999999982" width="43.333333333333343" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wDn-mw-urb" firstAttribute="top" secondItem="OXs-kD-p4n" secondAttribute="top" id="9xJ-Bh-eMG"/>
+                                                <constraint firstItem="OXs-kD-p4n" firstAttribute="top" secondItem="C7a-TW-2vi" secondAttribute="top" constant="8" id="Jg4-D4-v5I"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wDn-mw-urb" secondAttribute="trailing" constant="20" id="QiO-xX-FoM"/>
+                                                <constraint firstItem="wDn-mw-urb" firstAttribute="leading" secondItem="OXs-kD-p4n" secondAttribute="trailing" constant="16" id="bpe-wz-jLe"/>
+                                                <constraint firstItem="OXs-kD-p4n" firstAttribute="leading" secondItem="C7a-TW-2vi" secondAttribute="leading" id="duQ-9H-Egb"/>
+                                                <constraint firstItem="wDn-mw-urb" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="OXs-kD-p4n" secondAttribute="bottom" id="e68-Ul-HTq"/>
+                                                <constraint firstAttribute="bottom" secondItem="OXs-kD-p4n" secondAttribute="bottom" constant="8" id="oEy-5j-X2U"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="OXs-kD-p4n" id="ael-Wq-VV6"/>
+                                            <outlet property="loginLabel" destination="wDn-mw-urb" id="o69-2G-IUg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-8D-LJY">
+                                <rect key="frame" x="176.66666666666666" y="430.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qvv-pR-Hyz" secondAttribute="trailing" id="16I-V1-Ykj"/>
+                            <constraint firstItem="M06-Ih-SBo" firstAttribute="top" secondItem="Qvv-pR-Hyz" secondAttribute="bottom" id="5ef-tb-11k"/>
+                            <constraint firstItem="Ios-gq-IMm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8r4-0k-vLw"/>
+                            <constraint firstItem="X0Y-8D-LJY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9qM-14-2B3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M06-Ih-SBo" secondAttribute="trailing" id="C3f-h6-rXc"/>
+                            <constraint firstItem="X0Y-8D-LJY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KWs-Yi-xAL"/>
+                            <constraint firstItem="Qvv-pR-Hyz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="QqP-ti-0ma"/>
+                            <constraint firstItem="Ios-gq-IMm" firstAttribute="top" secondItem="M06-Ih-SBo" secondAttribute="bottom" constant="8" symbolic="YES" id="SOA-ee-2lU"/>
+                            <constraint firstItem="Ios-gq-IMm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hRz-Xe-D8c"/>
+                            <constraint firstItem="Ios-gq-IMm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rOi-ga-Abn"/>
+                            <constraint firstItem="Qvv-pR-Hyz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vU5-pA-sZg"/>
+                            <constraint firstItem="M06-Ih-SBo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ykJ-FA-17W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cerca" id="gaC-tb-aHp"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="X0Y-8D-LJY" id="SZW-TM-vXn"/>
+                        <outlet property="ownerField" destination="i31-7d-yve" id="hly-Hf-OAC"/>
+                        <outlet property="repoField" destination="XOI-g1-Cma" id="BEd-Vl-za3"/>
+                        <outlet property="resultTableView" destination="Ios-gq-IMm" id="Aze-SR-h3G"/>
+                        <outlet property="searchButton" destination="9SC-fn-baZ" id="D3O-zZ-LMj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082.608695652174" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AGe-l7-tqd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Zb-PH-Fkt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kk7-0R-LZ7">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="z6Y-Pw-cnb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jya-mf-Gxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="112.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
