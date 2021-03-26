@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  stargazer
+
+  Created by Marco Celestino on 25/03/2021.
+  
+*/
+
+//MARK: - Common
+
+/*Error alert title*/
+"alert.error.title" = "Errore";
+
+/*Error alert cancel action title*/
+"alert.error.cancel" = "Chiudi";
+
+
+//MARK: - StargazersViewController
+
+/*Stargazers page title*/
+"stargazers.page.title" = "Stargazers";
+
+/*Owner field placeholder text*/
+"field.placeholder.owner" = "Nome dell'owner";
+
+/*Repository field placeholder text*/
+"field.placeholder.repo" = "Nome del repository";
+
+/*Submit button title*/
+"button.title.submit" = "Cerca";
