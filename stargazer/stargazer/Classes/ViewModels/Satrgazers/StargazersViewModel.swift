@@ -38,6 +38,7 @@ class StargazersViewModel {
                 case .success(let response):
                     guard let response = response, response.count > 0 else{
                         self?.theresNoMoreData = true
+                        self?.delegate.didLoad(items: [])
                         return
                     }
                     self?.stargazers.append(contentsOf: response)

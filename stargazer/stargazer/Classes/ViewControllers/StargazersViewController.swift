@@ -36,6 +36,8 @@ class StargazersViewController: UIViewController {
     var viewModel: StargazersViewModel?
     var dataSource: StargazersDataSource?
 
+    let noContentImageView = UIImageView(image: UIImage(named: "no_result"))
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,7 @@ class StargazersViewController: UIViewController {
         //Prepare tableView
         resultTableView.tableFooterView = UIView()
         resultTableView.prefetchDataSource = self
+        noContentImageView.contentMode = .scaleAspectFit
     }
 
     // MARK: - Utils
@@ -87,6 +90,7 @@ extension StargazersViewController: StargazersDataSourceDelegate {
 
     func didLoad(items: [Stargazer]) {
         self.dataSource?.applySnapshot(items: items)
+        self.resultTableView.backgroundView = self.dataSource?.count == 0 ? noContentImageView : nil
         self.activityIndicator.stopAnimating()
     }
 

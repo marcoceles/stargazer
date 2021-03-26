@@ -22,6 +22,8 @@ class StargazersDataSource{
     private var dataSource: DataSource!
     private var snapshot = Snapshot()
 
+    var count: Int = 0
+
     init(with tableView: UITableView) {
         self.tableView = tableView
         makeDataSource()
@@ -47,11 +49,13 @@ class StargazersDataSource{
 
     func applySnapshot(items: [Stargazer], animatingDifferences: Bool = true) {
         snapshot.appendItems(items)
+        count += items.count
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
     func reset(){
         snapshot.deleteAllItems()
+        count = 0
         snapshot.appendSections([.main])
         dataSource.apply(snapshot, animatingDifferences: true)
     }
